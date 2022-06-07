@@ -23,7 +23,7 @@ pipeline {
             steps {
                 echo "Hello Java Express"
                 sh 'ls'
-                sh 'docker build -t  sujitcloud2018/docker_jenkins_springboot:${BUILD_NUMBER} .'
+                sh 'docker build -t  sujitcloud2018/docker_jenkins_springboot:${BUILD_NUMBER} -f Dockerfile .'
             }
         }
         stage('Docker Login'){
